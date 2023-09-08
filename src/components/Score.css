@@ -9,7 +9,7 @@
 }
 
 .data{
-    width: 75%;
+    width: 80%;
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -48,4 +48,5 @@
 .msg p{
     margin-top: 20px;
     color: var(--light-lavender);
+    padding: 0 25px;
 }

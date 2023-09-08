@@ -1,19 +1,40 @@
 import "./Results.css";
-import data from '../../data.json'
+import data from "../../data.json";
 import Score from "./Score";
 
 const Results = () => {
   // arr to pass along the individual scores from the original arr
   const scoreArr = data.map((item) => item.score);
-  
 
+  const colors = [
+    "hsl(0, 100%, 67%)",
+    "hsl(39, 100%, 56%)",
+    "hsl(166, 100%, 37%)",
+    "hsl(234, 85%, 45%)",
+  ];
+  const backgroundColors = [
+    "hsla(0, 100%, 67%, .2)",
+    "hsla(39, 100%, 56%, .2)",
+    "hsla(166, 100%, 37%, .2)",
+    "hsla(234, 85%, 45%, .2)",
+  ];
   //   function to dynamically extract the data from the json.data file
   const testResults = data.map((item, index) => {
+    const color = colors[index % colors.length];
+    const backgroundColor = backgroundColors[index % backgroundColors.length];
+
     return (
-      <div key={index}>
-        <img src={item.icon} alt={`${item.category} Icon`} />
-        <h3>{item.category}</h3>
-        <p>{item.score}</p>
+      <div key={index} className="category">
+        <div
+          styler={{ backgroundColor: backgroundColor }}
+          className="icon-container"
+        >
+          <img src={item.icon} alt={`${item.category} Icon`} />
+          <h3 style={{ color }}>{item.category}</h3>
+        </div>
+        <p>
+          {item.score} <span className="hundred">/100</span>
+        </p>
       </div>
     );
   });
@@ -22,9 +43,11 @@ const Results = () => {
     <div className="main-container">
       <Score scoreArr={scoreArr} />
       <div className="summary-container">
-        <h1>Summary</h1>
-        <div>{testResults}</div>
-        <button>continue</button>
+        <div className="results">
+          <h1>Summary</h1>
+          <div className="category-container">{testResults}</div>
+          <button className="btn">continue</button>
+        </div>
       </div>
     </div>
   );
