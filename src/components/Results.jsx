@@ -1,6 +1,5 @@
 import "./Results.css";
-import data from "../../data.json";
-import reaction from "../assets/images/icon-reaction.svg";
+import data from '../../data.json'
 import Score from "./Score";
 
 const Results = () => {
