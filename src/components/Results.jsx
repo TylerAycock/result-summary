@@ -24,11 +24,12 @@ const Results = () => {
     const backgroundColor = backgroundColors[index % backgroundColors.length];
 
     return (
-      <div key={index} className="category">
-        <div
-          styler={{ backgroundColor: backgroundColor }}
-          className="icon-container"
-        >
+      <div
+        key={index}
+        className="category"
+        style={{ backgroundColor: backgroundColor }}
+      >
+        <div className="icon-container">
           <img src={item.icon} alt={`${item.category} Icon`} />
           <h3 style={{ color }}>{item.category}</h3>
         </div>
