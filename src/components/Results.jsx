@@ -1,5 +1,5 @@
 import "./Results.css";
-import data from "../data.json";
+import data from "../../public/data.json";
 import Score from "./Score";
 
 const Results = () => {
@@ -20,8 +20,8 @@ const Results = () => {
   ];
   //   function to dynamically extract the data from the json.data file
   const testResults = data.map((item, index) => {
-    const color = colors[index % colors.length];
-    const backgroundColor = backgroundColors[index % backgroundColors.length];
+    const color = colors[index];
+    const backgroundColor = backgroundColors[index];
 
     return (
       <div

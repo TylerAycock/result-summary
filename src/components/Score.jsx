@@ -16,7 +16,7 @@ const Score = ({ scoreArr }) => {
         <div className="msg">
           <h2>Great</h2>
           <p>
-            You scored higher than 65% of the people who ahve taken those tests.
+            You scored higher than 65% of the people who have taken those tests.
           </p>
         </div>
       </div>
