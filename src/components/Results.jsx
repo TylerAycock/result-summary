@@ -1,5 +1,5 @@
 import "./Results.css";
-import data from "../../public/data.json";
+import data from "../../data.json";
 import Score from "./Score";
 
 const Results = () => {
