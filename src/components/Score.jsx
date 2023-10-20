@@ -1,8 +1,7 @@
 import "./Score.css";
 
 const Score = ({ scoreArr }) => {
-  const totalScore = 0;
-  const sumWithInitial = scoreArr.reduce((acc, cur) => acc + cur, totalScore);
+  const sumWithInitial = scoreArr.reduce((acc, cur) => acc + cur, 0);
   const average = Math.floor(sumWithInitial / scoreArr.length);
 
   return (

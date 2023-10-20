@@ -1,8 +1,31 @@
 import "./Results.css";
-import data from "../../data.json";
+// import data from "../../data.json";
 import Score from "./Score";
 
 const Results = () => {
+
+  const data = [
+    {
+      category: "Reaction",
+      score: 80,
+      icon: "./src/assets/images/icon-reaction.svg",
+    },
+    {
+      category: "Memory",
+      score: 92,
+      icon: "./src/assets/images/icon-memory.svg",
+    },
+    {
+      category: "Verbal",
+      score: 61,
+      icon: "./src/assets/images/icon-verbal.svg",
+    },
+    {
+      category: "Visual",
+      score: 72,
+      icon: "./src/assets/images/icon-visual.svg",
+    },
+  ];
   // arr to pass along the individual scores from the original arr
   const scoreArr = data.map((item) => item.score);
 
@@ -18,7 +41,8 @@ const Results = () => {
     "hsla(166, 100%, 37%, .2)",
     "hsla(234, 85%, 45%, .2)",
   ];
-  //   function to dynamically extract the data from the json.data file
+ 
+
   const testResults = data.map((item, index) => {
     const color = colors[index];
     const backgroundColor = backgroundColors[index];
@@ -44,11 +68,14 @@ const Results = () => {
     <div className="main-container">
       <Score scoreArr={scoreArr} />
       <div className="summary-container">
-        <div className="results">
+        <h1>Summary</h1>
+        <div className="ind__category">{testResults}</div>
+        <button>continue</button>
+        {/* <div className="results">
           <h1>Summary</h1>
           <div className="category-container">{testResults}</div>
-          <button className="btn">continue</button>
-        </div>
+          <button>continue</button>
+        </div> */}
       </div>
     </div>
   );
