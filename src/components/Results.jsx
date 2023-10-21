@@ -3,7 +3,6 @@ import "./Results.css";
 import Score from "./Score";
 
 const Results = () => {
-
   const data = [
     {
       category: "Reaction",
@@ -41,7 +40,6 @@ const Results = () => {
     "hsla(166, 100%, 37%, .2)",
     "hsla(234, 85%, 45%, .2)",
   ];
- 
 
   const testResults = data.map((item, index) => {
     const color = colors[index];
@@ -58,7 +56,8 @@ const Results = () => {
           <h3 style={{ color }}>{item.category}</h3>
         </div>
         <p>
-          {item.score} <span className="hundred">/100</span>
+          {item.score}
+          <span>/100</span>
         </p>
       </div>
     );
@@ -67,15 +66,10 @@ const Results = () => {
   return (
     <div className="main-container">
       <Score scoreArr={scoreArr} />
-      <div className="summary-container">
-        <h1>Summary</h1>
-        <div className="ind__category">{testResults}</div>
+      <div className="summary__container">
+        <h2>Summary</h2>
+        <div className="category__container">{testResults}</div>
         <button>continue</button>
-        {/* <div className="results">
-          <h1>Summary</h1>
-          <div className="category-container">{testResults}</div>
-          <button>continue</button>
-        </div> */}
       </div>
     </div>
   );
