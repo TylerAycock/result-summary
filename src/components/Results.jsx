@@ -1,5 +1,4 @@
 import "./Results.css";
-// import data from "../../data.json";
 import Score from "./Score";
 
 const Results = () => {
