@@ -43,6 +43,26 @@ p span{
     gap: 5px;
 }
 
+.reaction{
+    color: hsl(0, 100%, 67%);
+    background: hsla(0, 100%, 67%, .2);
+}
+
+.memory{
+    color:hsl(39, 100%, 56%);
+    background: hsla(39, 100%, 56%, .2) ;
+}
+
+.verbal{
+    color: hsl(166, 100%, 37%);
+    background: hsla(166, 100%, 37%, .2);
+}
+
+.visual{
+    color: hsl(234, 85%, 45%) ;
+    background: hsla(234, 85%, 45%, .2);
+}
+
 button{
     cursor: pointer;
     padding: 15px 50px;
